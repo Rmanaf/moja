@@ -1,0 +1,73 @@
+{
+  "name": "moja",
+  "displayName": "Moja",
+  "description": "Detects mojibake (mis-decoded UTF-8 text) in your files and lets you fix it by re-encoding the selection to UTF-8.",
+  "icon": "icon.png",
+  "version": "0.0.1",
+  "publisher": "moja",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "keywords": [
+    "mojibake",
+    "encoding",
+    "utf-8",
+    "fix encoding"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "moja.encodeSelectionToUtf8",
+        "title": "Moja: Encode Selection to UTF-8",
+        "category": "Moja"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "moja.encodeSelectionToUtf8",
+        "key": "ctrl+shift+8",
+        "mac": "cmd+shift+8",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Moja",
+      "properties": {
+        "moja.enableMojibakeDetection": {
+          "type": "boolean",
+          "default": true,
+          "description": "Detect mojibake characters when a file is opened and notify the user."
+        },
+        "moja.detectionThreshold": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "description": "Minimum number of suspicious mojibake sequences required before notifying."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.3.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/moja.git"
+  }
+}
