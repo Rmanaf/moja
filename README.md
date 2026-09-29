@@ -11,10 +11,8 @@ Moja detects **mojibake** (text that was saved as UTF-8 but read with the wrong 
 ### 1. Mojibake detection on file open
 When you open a file, Moja scans its contents for sequences that look like mis-decoded UTF-8 (UTF-8 bytes read as Windows-1252 / Latin-1, `U+FFFD` replacement characters, etc.). If enough suspicious sequences are found, you get a notification so you know the file's text is corrupted.
 
-Configure the sensitivity from Settings:
+You can also re-run this scan at any time from the Command Palette with **Moja: Check File for Mojibake**, or by pressing `Ctrl+Shift+9` (`Cmd+Shift+9` on macOS).
 
-- `moja.enableMojibakeDetection` — turn detection on/off (default: on)
-- `moja.detectionThreshold` — how many suspicious sequences trigger a notification (default: 3)
 
 ### 2. Moja: Encode Selection to UTF-8
 Select the mojibake text (or just place the cursor inside it) and run **Moja: Encode Selection to UTF-8** from the Command Palette (`Ctrl+Shift+P`), or use the shortcut:
