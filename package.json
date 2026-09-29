@@ -4,10 +4,15 @@
   "description": "Detects mojibake (mis-decoded UTF-8 text) in your files and lets you fix it by re-encoding the selection to UTF-8.",
   "icon": "icon.png",
   "version": "0.0.1",
-  "publisher": "moja",
+  "publisher": "Rmanaf",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "galleryBanner": {
+    "color": "#2f3640",
+    "theme": "dark"
+  },
+  "qna": false,
   "categories": [
     "Other",
     "Linters"
@@ -68,6 +73,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourname/moja.git"
+    "url": "https://github.com/Rmanaf/moja.git"
   }
 }
