@@ -1,8 +1,8 @@
 # Moja
 
-<img src="icon.png" alt="Moja icon" width="128" height="128" />
+<img src="https://raw.githubusercontent.com/Rmanaf/moja/main/icon.png" alt="Moja icon" width="128" height="128" />
 
-Are you sufering from **mojibake**? Meet Moja! Your VSCode cure.
+Are you suffering from **mojibake**? Meet Moja! Your VSCode cure.
 
 Moja detects **mojibake** (text that was saved as UTF-8 but read with the wrong encoding, producing things like `Ã©`, `â€™`, `Ð¸`) when you open a file, and gives you a one-keystroke fix.
 
